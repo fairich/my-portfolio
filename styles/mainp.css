@@ -72,6 +72,7 @@ h1 {
 }
 
 
+
 .left-top {
     top: 20%;
     left: 10%;
@@ -97,7 +98,37 @@ h1 {
     right: 10%;
 }
 
+
+
 .about:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .about-bl {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about {
+        width: 80%;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .center-content {
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        margin-top: 15px;
+        font-size: 32px;
+    }
 }
