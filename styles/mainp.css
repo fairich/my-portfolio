@@ -3,132 +3,136 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(90deg, #8A39E1, #46244C);
+    padding: 20px;
 }
+
 .all-cont {
-    position: relative;
     width: 100%;
     max-width: 1200px;
-    height: 800px;
+    position: relative;
+    min-height: 600px;
 }
-.center-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-}
-.avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #ddd;
-    margin: 0 auto 20px;
-}
-h1 {
-    font-size: 48px;
-    color: #333;
-    margin-top: 20px;
-    text-align: center;
-    font-family: 'Righteous', cursive;
-}
-.about-bl {
-    position: absolute;
-    width: 100%;
-    height: 100%;
 
-}
-.about {
+.center-content {
+    text-align: center;
     position: absolute;
-    padding: 20px;
-    background-color: rgba(147, 82, 233, 0.774);
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    width: 200px;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
-                inset 0 0 10px rgba(255, 255, 255, 0.2);
-                font-family: 'Raleway', sans-serif;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
+
 .avatar {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin: 0 auto;
-    overflow: hidden; 
+    overflow: hidden;
     border: 3px solid rgb(150, 70, 255);
     box-shadow: 0 0 30px rgba(7, 99, 161, 0.473);
 }
+
 .avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
-
-
-.left-top {
-    top: 20%;
-    left: 10%;
-}
-.left-middle {
-    top: 40%;
-    left: 5%;
-}
-.left-bottom {
-    bottom: 30%;
-    left: 10%;
-}
-.right-top {
-    top: 20%;
-    right: 10%;
-}
-.right-middle {
-    top: 40%;
-    right: 5%;
-}
-.right-bottom {
-    bottom: 30%;
-    right: 10%;
+h1 {
+    font-size: 48px;
+    color: white;
+    margin-top: 20px;
+    font-family: 'Righteous', cursive;
 }
 
+.about {
+    position: absolute;
+    padding: 15px 25px;
+    background-color: rgba(147, 82, 233, 0.774);
+    border-radius: 15px;
+    width: 200px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+                inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
 
+/* Позиционирование блоков */
+.left-top { top: 20%; left: 10%; }
+.left-middle { top: 40%; left: 5%; }
+.left-bottom { bottom: 20%; left: 10%; }
+.right-top { top: 20%; right: 10%; }
+.right-middle { top: 40%; right: 5%; }
+.right-bottom { bottom: 20%; right: 10%; }
 
 .about:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
 }
 
-
-
+/* Медиа-запросы */
 @media screen and (max-width: 768px) {
+    .all-cont {
+        min-height: auto;
+    }
+
+    .center-content {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin-bottom: 30px;
+    }
+
     .about-bl {
         display: flex;
         flex-direction: column;
+        gap: 15px;
         align-items: center;
     }
 
     .about {
-        width: 80%;
-        margin: 10px 0;
+        position: relative;
+        width: 90%;
+        max-width: 400px;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px;
     }
 
-    .center-content {
-        margin-bottom: 30px;
+    .avatar {
+        width: 120px;
+        height: 120px;
     }
 
     h1 {
-        margin-top: 15px;
-        font-size: 32px;
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .about {
+        padding: 10px 15px;
+        font-size: 14px;
     }
 }
