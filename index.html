@@ -4,24 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/mainp.css">
-    <title>fairicаh</title>
+    <title>fairich</title>
 </head>
+
+<script>
+setTimeout(function() {
+    const splash = document.getElementById('splash-screen');
+    splash.classList.add('fade-out');
+    
+    setTimeout(function() {
+        splash.style.display = 'none';
+    }, 1500);
+}, 1000);
+</script>
+
 <body>
+    <div id="splash-screen">
+        <!-- Здесь содержимое заставки -->
+        <img src="  imeges/snow.gif" alt="Logo">
+    </div>
     <div class="all-cont">
         <div class="center-content">
             <div class="avatar">
-                <img src="imeges/avatar.jpg">
+                <img src="imeges/logo.png">
             </div>
             <h1>FAIRICH</h1>
         </div>
         
         <div class="about-bl">
-            <div class="about left-top">Contact</div>
-            <div class="about left-middle">About me</div>
-            <div class="about left-bottom">Game</div>
-            <div class="about right-top">in progress</div>
-            <div class="about right-middle">in progress</div>
-            <div class="about right-bottom">in progress</div>
+            <a href="pages/contact.html" class="about left-top">Contact</a>
+            <button class="about left-middle">About me</button>
+            <button class="about left-bottom">Game</button>
+            <button class="about right-top">in progress</button>
+            <button class="about right-middle">in progress</button>
+            <button class="about right-bottom">in progress</button>
         </div>
     </div>
 </body>

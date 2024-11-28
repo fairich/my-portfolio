@@ -35,7 +35,7 @@ body {
     border-radius: 50%;
     margin: 0 auto;
     overflow: hidden;
-    border: 3px solid rgb(150, 70, 255);
+    border: 3px solid rgba(78, 142, 216, 0.336);
     box-shadow: 0 0 30px rgba(7, 99, 161, 0.473);
 }
 
@@ -57,25 +57,30 @@ h1 {
     padding: 15px 25px;
     background-color: rgba(147, 82, 233, 0.774);
     border-radius: 15px;
+    border: none;
     width: 200px;
     color: white;
     font-family: 'Raleway', sans-serif;
     transition: all 0.3s ease;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
                 inset 0 0 10px rgba(255, 255, 255, 0.2);
+    text-decoration: none !important;
+    color: white;
+}
+.about-bl button:active {
+    transform: scale(0.98);
 }
 
 /* Позиционирование блоков */
 .left-top { top: 20%; left: 10%; }
-.left-middle { top: 40%; left: 5%; }
+.left-middle { top: 45%; left: 5%; }
 .left-bottom { bottom: 20%; left: 10%; }
 .right-top { top: 20%; right: 10%; }
-.right-middle { top: 40%; right: 5%; }
+.right-middle { top: 45%; right: 5%; }
 .right-bottom { bottom: 20%; right: 10%; }
 
-.about:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+.about-bl button:hover {
+    opacity: 0.8;
 }
 
 /* Медиа-запросы */
@@ -107,8 +112,16 @@ h1 {
         right: auto !important;
         top: auto !important;
         bottom: auto !important;
-        display: flex;
-        justify-content: space-between;
+        display: block;
+        background: rgba(255, 255, 255, 0.1); /* полупрозрачный фон */
+        border-radius: 10px; /* скругленные углы */
+        backdrop-filter: blur(5px);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        text-align: center;
+    }
+
+    .about:hover {
+        background: rgba(255, 255, 255, 0.2);
     }
 
     .avatar {
@@ -131,8 +144,32 @@ h1 {
         font-size: 28px;
     }
 
-    .about {
+    .about-bl button {
         padding: 10px 15px;
         font-size: 14px;
     }
+    
+}
+
+/*стиль заставки тут*/
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+#splash-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполняет всё пространство, обрезая при необходимости */
+    /* или используйте contain для сохранения пропорций без обрезки */
+    /* object-fit: contain; */
+}
+#splash-screen.fade-out {
+    opacity: 0;
 }
