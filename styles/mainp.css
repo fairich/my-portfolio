@@ -20,10 +20,10 @@ body {
 }
 
 .all-cont {
-    width: 100%;
-    max-width: 90vw;
+    width: 100vh;
+    max-width: 90vh;
     position: relative;
-    min-height: 600px;
+    min-height: 70vh;
 }
 
 .center-content {
@@ -36,13 +36,13 @@ body {
 }
 
 .avatar {
-    width: 35%;
-    height: 35%;
+    width: 20vh;
+    height: 20vh;
     border-radius: 50%;
     margin: 0 auto;
     overflow: hidden;
-    border: 3px solid rgba(158, 156, 230, 0.644);
-    box-shadow: 0 0 30px rgba(158, 156, 230, 0.945);
+    border: 0.4vh solid rgba(158, 156, 230, 0.644);
+    box-shadow: 0 0 4vh rgba(158, 156, 230, 0.945);
 }
 
 .avatar img {
@@ -52,7 +52,7 @@ body {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 5vh;
     color: white;
     margin-top: 1vh;
     font-family: 'Righteous', cursive;
@@ -62,15 +62,15 @@ h1 {
     position: absolute;
     padding: 2vh;
     background-color: rgba(135, 52, 243, 0.342);
-    border-radius: 1vw;
+    border-radius: 1vh;
     border: none;
-    width: 25vh;
+    width: 20vh;
     color: white;
     font-family: 'Raleway', sans-serif;
-    font-size: 25px;
+    font-size: 2.5vh;
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.548),
-                inset 0 0 10px rgba(255, 255, 255, 0.336);
+    box-shadow: 0 0 1.5vh rgba(255, 255, 255, 0.548),
+                inset 0 0 1.5vh rgba(255, 255, 255, 0.336);
     text-decoration: none !important;
     color: white;
     text-align: center;
@@ -92,7 +92,7 @@ h1 {
 }
 
 /* Медиа-запросы */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .all-cont {
         min-height: auto;
     }
@@ -121,8 +121,8 @@ h1 {
         top: auto !important;
         bottom: auto !important;
         display: block;
-        background: rgba(255, 255, 255, 0.1); /* полупрозрачный фон */
-        border-radius: 10px; /* скругленные углы */
+        background: rgba(255, 255, 255, 0.1); 
+        border-radius: 10px;
         backdrop-filter: blur(5px);
         box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
         text-align: center;
@@ -157,7 +157,7 @@ h1 {
         font-size: 14px;
     }
     
-}
+} */
 
 /*стиль заставки тут*/
 #splash-screen {
