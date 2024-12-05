@@ -9,13 +9,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(90deg, #8A39E1, #46244C);
+    background: radial-gradient(circle at center,
+        #9932CC 0%, /* более светлый фиолетовый в центре */
+        #4B0082 70%, /* темно-фиолетовый */
+        #2A004F 100% /* очень темный фиолетовый по краям */
+    );
+    min-height: 100vh;
+    margin: 0;
     padding: 20px;
 }
 
 .all-cont {
     width: 100%;
-    max-width: 1200px;
+    max-width: 90vw;
     position: relative;
     min-height: 600px;
 }
@@ -30,13 +36,13 @@ body {
 }
 
 .avatar {
-    width: 150px;
-    height: 150px;
+    width: 35%;
+    height: 35%;
     border-radius: 50%;
     margin: 0 auto;
     overflow: hidden;
-    border: 3px solid rgba(78, 142, 216, 0.336);
-    box-shadow: 0 0 30px rgba(7, 99, 161, 0.473);
+    border: 3px solid rgba(158, 156, 230, 0.644);
+    box-shadow: 0 0 30px rgba(158, 156, 230, 0.945);
 }
 
 .avatar img {
@@ -48,22 +54,23 @@ body {
 h1 {
     font-size: 48px;
     color: white;
-    margin-top: 20px;
+    margin-top: 1vh;
     font-family: 'Righteous', cursive;
 }
 
 .about {
     position: absolute;
-    padding: 15px 25px;
-    background-color: rgba(147, 82, 233, 0.774);
-    border-radius: 15px;
+    padding: 2vh;
+    background-color: rgba(135, 52, 243, 0.342);
+    border-radius: 1vw;
     border: none;
-    width: 200px;
+    width: 25vh;
     color: white;
     font-family: 'Raleway', sans-serif;
+    font-size: 25px;
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
-                inset 0 0 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.548),
+                inset 0 0 10px rgba(255, 255, 255, 0.336);
     text-decoration: none !important;
     color: white;
     text-align: center;
@@ -73,12 +80,12 @@ h1 {
 }
 
 /* Позиционирование блоков */
-.left-top { top: 20%; left: 10%; }
-.left-middle { top: 45%; left: 5%; }
-.left-bottom { bottom: 20%; left: 10%; }
-.right-top { top: 20%; right: 10%; }
-.right-middle { top: 45%; right: 5%; }
-.right-bottom { bottom: 20%; right: 10%; }
+.left-top { top: 20%; left: 15%; }
+.left-middle { top: 44%; left: 10%; }
+.left-bottom { bottom: 20%; left: 15%; }
+.right-top { top: 20%; right: 15%; }
+.right-middle { top: 44%; right: 10%; }
+.right-bottom { bottom: 20%; right: 15%; }
 
 .about-bl a:hover {
     opacity: 0.8;
