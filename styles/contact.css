@@ -1,0 +1,13 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background: repeating-radial-gradient(
+        #9932CC 0%, /* более светлый фиолетовый в центре */
+        #4B0082 70%, /* темно-фиолетовый */
+        #2A004F 100% /* очень темный фиолетовый по краям */
+    );
+}

@@ -13,7 +13,6 @@ body {
         #4B0082 70%, /* темно-фиолетовый */
         #2A004F 100% /* очень темный фиолетовый по краям */
     );
-    min-height: 100vh;
     margin: 0;
     padding: 20px;
 }
@@ -73,12 +72,12 @@ h1 {
     transform: scale(0.98);
 }
 /* Позиционирование блоков */
-.left-top { top: 20%; left: 15%; }
-.left-middle { top: 44%; left: 10%; }
-.left-bottom { bottom: 20%; left: 15%; }
-.right-top { top: 20%; right: 15%; }
-.right-middle { top: 44%; right: 10%; }
-.right-bottom { bottom: 20%; right: 15%; }
+.left-top { top: 20%; left: 0%; }
+.left-middle { top: 44%; left: -5%; }
+.left-bottom { bottom: 20%; left: -0%; }
+.right-top { top: 20%; right: 0%; }
+.right-middle { top: 44%; right: -5%; }
+.right-bottom { bottom: 20%; right: 0%; }
 .about-bl a:hover {
     opacity: 0.8;
 }
@@ -136,12 +135,12 @@ h1 {
     }
 
     /* Обновленное позиционирование для мобильных */
-    .left-top { top: 38%; left: 9%; }
-    .left-middle { top: 48%; left: 5%; }
-    .left-bottom { bottom: 37%; left: 9%; }
-    .right-top { top: 38%; right: 9%; }
-    .right-middle { top: 48%; right: 5%; }
-    .right-bottom { bottom: 37%; right: 9%; }
+    .left-top { top: 38%; left: 0%; }
+    .left-middle { top: 49%; left: -4%; }
+    .left-bottom { bottom: 35%; left: 0%; }
+    .right-top { top: 38%; right: 0%; }
+    .right-middle { top: 49%; right: -4%; }
+    .right-bottom { bottom: 35%; right: 0%; }
 }
 
 /* @media screen and (max-width: 480px) {
