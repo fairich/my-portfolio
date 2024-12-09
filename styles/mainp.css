@@ -106,16 +106,16 @@ h1 {
 }
 
 /* Медиа-запросы */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 720px) {
     .all-cont {
-        width: 100vh;
-        max-width: 100vh;
-        height: 100vh;
-        padding: 2vh;
+        width: 40vh;
+        max-width: 40vh;
+        height: 90vh;
+        padding: 0;
     }
 
     .center-content {
-        width: 100vh;
+        width: 20vh;
     }
 
     .avatar {
